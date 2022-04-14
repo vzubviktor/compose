@@ -1,0 +1,16 @@
+stages:          # List of stages for jobs, and their order of execution
+  - clone
+  - build 
+  
+clone-job:
+  stage: clone
+  script:
+    - echo "repository cloned"
+
+build-job:       # This job runs in the build stage, which runs first.
+  stage: build
+  script:
+    - echo "build started"
+    - echo "build completed"
+    
+
